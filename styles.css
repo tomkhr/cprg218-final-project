@@ -1,0 +1,21 @@
+#startButton {
+
+    display: inline;
+}
+
+
+.tap-button {
+    background-color: orange;
+    color: black;
+    display: none;
+}
+
+#restartButton {
+    
+    display: none;
+}
+
+#yourScore {
+
+    display: none;
+}
