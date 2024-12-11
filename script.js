@@ -19,11 +19,18 @@ startButton.addEventListener('click', function(){
 
 tapButton.addEventListener('click', function(){
     score++
+    yourScore.style.display = 'inline';
+    yourScore.textContent = score;
 });
 
 function startGame (){
+    timer.style.display = 'inline';
+    yourScore.style.display = 'inline';
+    yourScore.textContent = '0';
+    
     setInterval(function(){
         timeLeft--;
+
         timer.textContent = 'Time left: ' + timeLeft + ' seconds';
 
         if (timeLeft <= 0) {
