@@ -17,3 +17,22 @@ startButton.addEventListener('click', function(){
     startGame();
 });
 
+tapButton.addEventListener('click', function(){
+    score++
+});
+
+function startGame (){
+    setInterval(function(){
+        timeLeft--;
+
+        if (timeLeft <= 0) {
+            clearInterval;
+            endGame();
+        }
+    },1000)
+};
+
+function endGame (){
+    tapButton.style.display = 'none';
+    restartButton.style.display = 'inline';
+};
