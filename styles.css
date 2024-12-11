@@ -1,24 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+body {
+    margin: 0;
+    background-color: #111111;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+nav {
+    display: flex;
+    background-color: #222222;
+    min-height: 60px;
+    padding: 0px 20px;
+}
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 80vh;
 }
 
 #startButton {
-
+    background-color: #111111;
+    color: #ff7700;
+    font-size: 1rem;
+    padding: 20px 30px;
+    border: 1px solid #ff7700;
+    border-radius: 2rem;
     display: inline;
+    margin: 40px;
+}
+
+#startButton:active {
+    background-color: #444444;
 }
 
 
 .tap-button {
-    background-color: orange;
-    color: black;
+    background-color: #ff7700;
+    color: rgba(255, 255, 255, 0.4);
     display: none;
+    font-size: 1.5rem;
+    font-weight: 100;
+    padding: 20px 30px;
+    border: 1px solid black;
+    border-radius: 3rem;
+}
+
+.tap-button:active {
+    background-color: #ff973b;
 }
 
 #restartButton {
-    
+    background-color: #111111;
+    color: #ff7700;
+    font-size: 1rem;
+    padding: 10px 25px;
+    border: 1px solid #ff7700;
+    border-radius: 2rem;
     display: none;
+}
+
+#restartButton:active {
+    background-color: #444444;
 }
 
 #yourScore, #hitsPerSecond, #record {
@@ -26,7 +73,18 @@ main {
     display: none;
 }
 
+#numberThisRoundScore {
+    color: #ff7700;
+    font-size: 4rem;
+    margin: 10px;
+}
+
 #timer {
 
     display: none;
+}
+
+#record {
+    color: #666666;
+    margin-top: 30px;
 }

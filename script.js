@@ -8,9 +8,11 @@ const yourScore = document.getElementById('yourScore');
 const instruction = document.getElementById('instructions');
 const hitsPerSecond = document.getElementById('hitsPerSecond');
 const recordScoreAndHits = document.getElementById('record');
+const numberThisRoundScore = document.getElementById('numberThisRoundScore');
 
 let score = 0;
-let timeLeft = 15;
+// Change timeLeft to 15 before submitting
+let timeLeft = 2;
 let intervalFunc;
 let hitPerSecondCalculated;
 let formatedHitsPerSecond;
@@ -54,11 +56,13 @@ restartButton.addEventListener('click', function(){
         score = 0;
         timeLeft = 15;
         restartButton.style.display = 'none';
+        recordScoreAndHits.style.display = 'none'
         tapButton.style.display = 'flex';
         timer.style.display = 'inline';
         timer.textContent = 'Time left: ' + timeLeft + ' seconds';
         yourScore.style.display = 'inline';
         yourScore.textContent = '0';
+        numberThisRoundScore.style.display = 'none';
         startGame();
 });
 
@@ -68,16 +72,18 @@ function endGame (){
     tapButton.style.display = 'none';
     restartButton.style.display = 'inline';
     allScores.push(score);
-    yourScore.textContent = 'Your score is: ' + score;
+    numberThisRoundScore.style.display = 'inline';
+    numberThisRoundScore.textContent = score;
+    yourScore.textContent = 'Score this round: ';
     yourScore.style.display = 'inline';
     timer.style.display = 'none';
     hitPerSecondCalculated = score / 15;
     formatedHitsPerSecond = hitPerSecondCalculated.toFixed(2)
-    hitsPerSecond.textContent = 'Hits per second: ' + formatedHitsPerSecond;
+    hitsPerSecond.textContent = formatedHitsPerSecond + ' hits per second';
     allHitsPerSec.push(formatedHitsPerSecond);
     hitsPerSecond.style.display = 'inline';
     allScoresCalculated = Math.max(...allScores);
     allHitsPerSecCalculated = Math.max(...allHitsPerSec);
-    recordScoreAndHits.textContent = 'Your record is: ' + allScoresCalculated + ' hits with ' + allHitsPerSecCalculated + ' hits/sec.'
+    recordScoreAndHits.textContent = 'Your record is: ' + allScoresCalculated + ' hits with ' + allHitsPerSecCalculated + ' hits/sec'
     recordScoreAndHits.style.display = 'inline';
 };
