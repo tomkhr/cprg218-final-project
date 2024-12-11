@@ -34,7 +34,7 @@ function startGame (){
         timer.textContent = 'Time left: ' + timeLeft + ' seconds';
 
         if (timeLeft <= 0) {
-            clearInterval;
+            clearInterval();
             endGame();
         }
     },1000)
@@ -42,25 +42,15 @@ function startGame (){
 
 restartButton.addEventListener('click', function(){
 
-        let score = 0;
-        let timeLeft = 15;
+        score = 0;
+        timeLeft = 15;
         restartButton.style.display = 'none';
-        tapButton.style.display = 'inline';
+        tapButton.style.display = 'flex';
         timer.style.display = 'inline';
+        timer.textContent = 'Time left: ' + timeLeft + ' seconds';
         yourScore.style.display = 'inline';
         yourScore.textContent = '0';
-        
-        setInterval(function(){
-            timeLeft--;
-    
-            timer.textContent = 'Time left: ' + timeLeft + ' seconds';
-    
-            if (timeLeft <= 0) {
-                clearInterval;
-                endGame();
-            }
-        },1000);
-
+        startGame();
 });
 
 
