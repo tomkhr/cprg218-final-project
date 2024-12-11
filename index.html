@@ -5,20 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="favicon" href="/assets/Tap Game Favicon.jpg">
     <title>Tapping Game</title>
 </head>
 <body>
     <nav>
-        <h1>Tap Like Crazy!</h1>
+        <div class="logo-title-div">
+            <img src="/assets/Tap Game Favicon.jpg" alt="Tapping Game Logo" class="logo">
+            <h1>Tap Like Crazy!</h1>
+        </div>
         <div>
-            <a href=""></a>
+            <ol>
+                <li href="index.html">Play</li>
+                <li href="About.html">About</li>
+                <li href="Contact.html">Contact</li>
+            </ol>
         </div>
     </nav>
     <main>
-        <div class="instructions-div">
-            
+        <div id="instructions-div">
+            <h2>Instructions</h2>
+                        <p id="instructions">You will have 15 seconds to tap the orange buttons as many times as you can</p>
         </div>
-            <p id="instructions">You will have 15 seconds to tap the orange buttons as many times as you can</p>
+
             <p id="timer">Time left: 15 seconds</p>
             <button id="startButton">Start Game</button>
             <button id="tapButton" class="tap-button">TAP ME!</button>
