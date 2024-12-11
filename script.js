@@ -6,10 +6,12 @@ const restartButton = document.getElementById('restartButton');
 const timer = document.getElementById('timer');
 const yourScore = document.getElementById('yourScore');
 const instruction = document.getElementById('instructions');
+const hitsPerSecond = document.getElementById('hitsPerSecond');
 
 let score = 0;
 let timeLeft = 15;
 let intervalFunc;
+let hitPerSecondCalculated;
 
 startButton.addEventListener('click', function(){
     startButton.style.display = 'none';
@@ -28,6 +30,7 @@ function startGame (){
     timer.style.display = 'inline';
     yourScore.style.display = 'inline';
     yourScore.textContent = '0';
+    hitsPerSecond.style.display = 'none';
     
     intervalFunc = setInterval(function(){
         timeLeft--;
@@ -62,4 +65,7 @@ function endGame (){
     yourScore.textContent = 'Your score is: ' + score;
     yourScore.style.display = 'inline';
     timer.style.display = 'none';
+    hitPerSecondCalculated = score / 15;
+    hitsPerSecond.textContent = 'Hits per second: ' + hitPerSecondCalculated;
+    hitsPerSecond.style.display = 'inline';
 };
