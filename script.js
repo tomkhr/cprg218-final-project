@@ -24,6 +24,7 @@ tapButton.addEventListener('click', function(){
 function startGame (){
     setInterval(function(){
         timeLeft--;
+        timer.textContent = 'Time left: ' + timeLeft + ' seconds';
 
         if (timeLeft <= 0) {
             clearInterval;
@@ -35,4 +36,7 @@ function startGame (){
 function endGame (){
     tapButton.style.display = 'none';
     restartButton.style.display = 'inline';
+    yourScore.textContent = 'Your score is: ' + score;
+    yourScore.style.display = 'inline';
+    timer.style.display = 'none';
 };
