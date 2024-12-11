@@ -40,6 +40,31 @@ function startGame (){
     },1000)
 };
 
+restartButton.addEventListener('click', function(){
+
+        let score = 0;
+        let timeLeft = 15;
+        restartButton.style.display = 'none';
+        tapButton.style.display = 'inline';
+        timer.style.display = 'inline';
+        yourScore.style.display = 'inline';
+        yourScore.textContent = '0';
+        
+        setInterval(function(){
+            timeLeft--;
+    
+            timer.textContent = 'Time left: ' + timeLeft + ' seconds';
+    
+            if (timeLeft <= 0) {
+                clearInterval;
+                endGame();
+            }
+        },1000);
+
+});
+
+
+
 function endGame (){
     tapButton.style.display = 'none';
     restartButton.style.display = 'inline';
