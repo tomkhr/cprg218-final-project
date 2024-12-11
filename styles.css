@@ -21,7 +21,7 @@ main {
     display: none;
 }
 
-#yourScore, #hitsPerSecond {
+#yourScore, #hitsPerSecond, #record {
 
     display: none;
 }
