@@ -9,6 +9,7 @@ const instruction = document.getElementById('instructions');
 
 let score = 0;
 let timeLeft = 15;
+let intervalFunc;
 
 startButton.addEventListener('click', function(){
     startButton.style.display = 'none';
@@ -28,13 +29,13 @@ function startGame (){
     yourScore.style.display = 'inline';
     yourScore.textContent = '0';
     
-    setInterval(function(){
+    intervalFunc = setInterval(function(){
         timeLeft--;
 
         timer.textContent = 'Time left: ' + timeLeft + ' seconds';
 
         if (timeLeft <= 0) {
-            clearInterval();
+            clearInterval(intervalFunc);
             endGame();
         }
     },1000)
