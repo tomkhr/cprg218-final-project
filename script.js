@@ -11,8 +11,7 @@ const recordScoreAndHits = document.getElementById('record');
 const numberThisRoundScore = document.getElementById('numberThisRoundScore');
 
 let score = 0;
-// Change timeLeft to 15 before submitting
-let timeLeft = 2;
+let timeLeft = 15;
 let intervalFunc;
 let hitPerSecondCalculated;
 let formatedHitsPerSecond;
