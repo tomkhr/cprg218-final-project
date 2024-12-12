@@ -309,6 +309,10 @@ a {
         gap: 10px;
     }
 
+    #game-components-div {
+        min-height: 40vh;
+    }
+
     .aboutIMG {
         max-width: 100%;
     }
