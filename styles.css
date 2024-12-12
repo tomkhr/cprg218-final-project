@@ -20,13 +20,24 @@ nav {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    min-height: 80vh;
+    gap: 20px;
+    padding: 30px;
+}
+
+#game-components-div {
     border: 1px solid #444444;
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    height: 70vh;
+    width: 100%;
+    min-height: 50vh;
 }
 
 h1 {
@@ -49,10 +60,8 @@ ol {
 }
 
 footer {
-    background-color: #ff7700;
+    background-color: #444444;
     display: flex;
-    position: absolute;
-    bottom: 0;
     justify-content: center;
     margin-bottom: 0px;
     width: 100%;
@@ -66,7 +75,6 @@ footer {
     border: 1px solid #ff7700;
     border-radius: 2rem;
     font-weight: 400;
-    transition-duration: 300ms;
 }
 
 .nav-item:hover {
@@ -100,11 +108,19 @@ footer {
 }
 
 #instructions-div {
+    width: 100%;
+    max-width: 800px;
     padding: 15px 30px;
-    margin: 0px 20px;
     border: 1px solid #444444;
     border-radius: 1rem;
-    max-width: 500px;
+}
+
+#game-components-div {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #startButton {
@@ -116,6 +132,10 @@ footer {
     border-radius: 2rem;
     display: inline;
     margin: 40px;
+}
+
+#startButton:hover {
+    background-color: #ff770020;
 }
 
 #startButton:active {
@@ -148,6 +168,10 @@ footer {
     display: none;
 }
 
+#restartButton:hover {
+    background-color: #ff770020;
+}
+
 #restartButton:active {
     background-color: #444444;
 }
@@ -172,6 +196,54 @@ footer {
     color: #888888;
     margin-top: 30px;
 }
+
+/* CSS for about page */
+
+#aboutNavBar {
+    display: flex;
+}
+
+.aboutNavItem {
+    text-decoration: none;
+    color: #ff7700;
+    padding: 5px 15px;
+    border: 1px solid #ff7700;
+    border-radius: 2rem;
+    font-weight: 400;
+}
+
+.aboutNavItem-current {
+    background-color: white;
+    border: 1px solid white;
+    color: #111111;
+    padding: 5px 15px;
+    border-radius: 2rem;
+    font-weight: 400;
+}
+
+.aboutNavItem:hover {
+    color: white;
+    border: 1px solid white;
+}
+
+.aboutContentDiv {
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #444444;
+    border-radius: 1rem;
+    display: flex;
+    gap: 20px;
+}
+
+figure {
+    margin: 0;
+}
+
+.aboutIMG {
+    max-width: 300px;
+    margin: 0;
+}
+
 
 
 
@@ -198,5 +270,21 @@ footer {
     .nav-item-this {
         padding: 5px 10px;
         font-size: 0.8rem;
+    }
+
+  .aboutContentDiv {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .aboutIMG {
+        max-width: 100%;
+    }
+
+    #aboutNavBar {
+        flex-direction: column;
+        gap: 10px;
     }
 }
